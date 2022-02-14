@@ -266,10 +266,3 @@ article #send-msg input{
     border-radius: 10px;
 }    
 
-/* Query */
-@media screen and (max-width:600px) {
-    .container{
-        height: 100%;
-        min-width: 550px;
-    }
-}
