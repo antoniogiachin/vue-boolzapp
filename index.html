@@ -61,33 +61,33 @@
                     <div class="container-inner">
 
                         <i class="fa-solid fa-magnifying-glass  cl-b0"></i>
-                        <input type="text" placeholder="Cerca o inizia conversazione" class="fs-little">
+                        <input type="text" placeholder="Cerca o inizia conversazione" class="fs-tiny">
 
                     </div>
                 </section>
 
                 <!-- section chat-list -->
-                <section id="chat-list">
+                <section id="chat-list" >
 
                     <ul>
 
-                        <li class="d-flex al-ctr">
+                        <li class="d-flex al-ctr" v-for="(contact, index) in contacts">
 
                             <div class="container-inner clearfix">
 
                                 <div class="list-left d-flex  g-10 fl-left w-70">
                                     <div class="header-img">
-                                        <img src="img/avatar_1.jpg" alt="avatar-logo">
+                                        <img :src=" 'img/avatar' + contact.avatar  + '.jpg' " alt="avatar-logo">
                                     </div>
                 
                                     <div class="header-txt">
-                                        <p class="fs-little">Massimo</p>
-                                        <p class="cl-b0 fs-little">sadasdasd</p>                            
+                                        <p class="fs-little">{{contact.name}}</p>
+                                        <p class="cl-b0 fs-little">{{contact.messages[contact.messages.length -1] .text.slice(0,12) + '...'}}</p>                            
                                     </div>
                                 </div>
             
                                 <div class="list-right d-flex al-ctr g-20 w-30 fl-right">
-                                    <p class="fs-tiny cl-b0">10/01/2020 16:15:34</p>
+                                    <p class="fs-tiny cl-b0">{{contact.messages[contact.messages.length -1].date}}</p>
                                 </div>
 
                             </div>
@@ -136,7 +136,38 @@
                 </div>
 
             </header>
-            
+
+            <!-- article main -->
+            <main>
+
+                <!-- article sezione chat -->
+                <section id="chat">
+
+                    <div class="row-chat jus-end">
+                        <div class="msg usr fs-little">
+                            <p>Porta fuori il cane <i class="fas fa-chevron-down"></i></p>
+                            <p class="fs-tiny txt-right">10/01/2020 16:34:54</p>
+                        </div>
+                        
+                    </div>
+
+                    <div class="row-chat">
+                        <div class="msg fs-little">
+                            <p>Porta fuori il cane <i class="fas fa-chevron-down"></i></p>
+                            <p class="fs-tiny txt-right">10/01/2020 16:34:54</p>
+                        </div>
+                        
+                    </div>
+                </section>
+
+                <!-- article sezione send msg -->
+                <section id="send-msg" class="d-flex jus-ar al-ctr">
+                    <i class="fa-solid fa-face-grin  fs-big"></i>
+                    <input type="text" placeholder="Inserisci il tuo testo">
+                    <i class="fa-solid fa-microphone  fs-big"></i>
+                </section>
+
+            </main>
 
 
         </article>
