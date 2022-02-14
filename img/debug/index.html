@@ -23,7 +23,7 @@
                     <div class="header-left">
     
                         <div class="header-img">
-                            <img src="img/avatar_io.jpg" alt="usr-img">
+                            <img src="../avatar_io.jpg" alt="usr-img">
                         </div>
     
                         <div class="header-txt">
@@ -85,23 +85,23 @@
                 <!-- aside chat list -->
                 <section id="chat-list">
 
-                    <ul v-for="(contact, index) in contacts">
+                    <ul>
 
-                        <li class="d-flex jus-ctr al-ctr jus-bet">
+                        <li class="d-flex jus-ctr al-ctr">
 
                             <div class="inner-container d-flex al-ctr d-flex-gap-20">
 
                                 <div class="list-img">
-                                    <img :src=" 'img/avatar'+ contact.avatar + '.jpg'" alt="list-img">
+                                    <img src="../avatar_1.jpg" alt="list-img">
                                 </div>
 
                                 <div class="list-txt">
-                                    <p class="fw-bold">{{contact.name}}</p>
-                                    <p class="cl-b0">{{contact.messages[1].text}}</p>
+                                    <p class="fw-bold">Massimo</p>
+                                    <p class="cl-b0">tutto ok ...</p>
                                 </div>
 
                                 <div class="list-hour">
-                                    <p class="cl-b0">{{contact.messages[1].date}}</p>
+                                    <p class="cl-b0">10/02/2020 16:35:43</p>
                                 </div>
 
                             </div>
@@ -130,7 +130,7 @@
                     <div class="header-left">
     
                         <div class="header-img">
-                            <img src="img/avatar_1.jpg" alt="contact-img">
+                            <img src="../avatar_1.jpg" alt="contact-img">
                         </div>
     
                         <div class="header-txt">
@@ -171,7 +171,6 @@
 
                                 <p class="fs-normal">Porta fuori il cane <i class="fas fa-chevron-down fl-right"></i></p>
                                 <p class="fs-little txt-right cl-b0">10/04/2020 15:35:50</p>
-
                             </div>
 
                         </div>
@@ -204,8 +203,5 @@
 
     </div>
 
-    <!-- JS & Vue Script -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
