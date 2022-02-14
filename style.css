@@ -82,6 +82,10 @@ body{
     font-size: 0.8em;
 }
 
+.fs-tiny{
+    font-size: 0.6em;
+}
+
 /* header */
 header, #notification, #search, #chat-list li{
     height: 60px;
@@ -142,3 +146,9 @@ aside{
     border: none;
     width: 90%;
 }
+
+/* chat-list */
+#chat-list ul{
+    list-style-type: none;
+}
+
