@@ -13,192 +13,96 @@
     <div id="app" class="container">
 
         <!-- aside -->
-        <aside>
+        <aside class="fl-left w-30">
 
-            <!-- aside header -->
+            <!-- header -->
             <header class="d-flex al-ctr">
 
-                <div class="inner-container d-flex al-ctr jus-bet">
-                    <!-- aside header left -->
-                    <div class="header-left">
-    
+                <div class="container-inner jus-bet ">
+
+                    <div class="header-left d-flex al-ctr g-10">
                         <div class="header-img">
-                            <img src="img/avatar_io.jpg" alt="usr-img">
+                            <img src="img/avatar_io.jpg" alt="io-logo">
                         </div>
     
                         <div class="header-txt">
-                            <p class="fw-bold">Nome utente</p>
+                            <p>Nome utente</p>
                         </div>
-    
                     </div>
 
-                    <!-- aside header right -->
-                    <div class="header-right  d-flex d-flex-gap-10">
-
+                    <div class="header-right d-flex al-ctr g-10">
                         <i class="fas fa-circle-notch cl-b0"></i>
                         <i class="fas fa-comment-alt cl-b0"></i>
                         <i class="fas fa-ellipsis-v cl-b0"></i>
-
-
                     </div>
-
-
+                    
                 </div>
-                
 
             </header>
 
-            <!-- aside main -->
+            <!-- main -->
             <main>
 
-                <!-- aside notifications -->
-                <section id="notification" class="d-flex jus-ctr al-ctr">
-
-                    <div class="inner-container d-flex al-ctr jus-bet d-flex-gap-20">
-
-                        <div class="bell d-flex jus-ctr al-ctr">
-                            <i class="fas fa-bell-slash fs-normal"></i>
+                <!-- section notification -->
+                <section id="notification">
+                    <div class="container-inner jus-bet al-ctr">
+                        <div class="bell d-flex al-ctr jus-ctr">
+                            <i class="fas fa-bell-slash"></i>
                         </div>
-
                         <div class="bell-txt">
-                            <p class="fw-bold">Ricevi le notifiche di nuovi messaggi</p>
-                            <a href="#" class="cl-b0">Attiva le notifiche</a>
+                            <p class="fs-little">Ricevi le notifiche di nuovi messaggi</p>
+                            <a href="#" class="cl-b0 fs-little">Attiva le notifiche</a>
                         </div>
-
-
                     </div>
-
                 </section>
 
-                <!-- aside search input -->
-                <section id="search" class="d-flex jus-ctr al-ctr">
+                <!-- section search -->
+                <section id="search"></section>
 
-                    <div class="inner-container d-flex jus-ar al-ctr">
+                <!-- section chat-list -->
+                <section id="chat-list"></section>
 
-                        <i class="fa-solid fa-magnifying-glass  cl-b0"></i>
-                        <input type="text" class="fs-little" placeholder="Cerca o inizia nuova conversazione">
 
-                    </div>
 
-                </section>
 
-                <!-- aside chat list -->
-                <section id="chat-list">
-
-                    <ul v-for="(contact, index) in contacts">
-
-                        <li class="d-flex jus-ctr al-ctr jus-bet">
-
-                            <div class="inner-container d-flex al-ctr d-flex-gap-20">
-
-                                <div class="list-img">
-                                    <img :src=" 'img/avatar'+ contact.avatar + '.jpg'" alt="list-img">
-                                </div>
-
-                                <div class="list-txt">
-                                    <p class="fw-bold">{{contact.name}}</p>
-                                    <p class="cl-b0">{{contact.messages[1].text}}</p>
-                                </div>
-
-                                <div class="list-hour">
-                                    <p class="cl-b0">{{contact.messages[1].date}}</p>
-                                </div>
-
-                            </div>
-
-                        </li>
-
-                    </ul>
-
-                </section>
             </main>
-
-
 
         </aside>
 
-
         <!-- article -->
-        <article>
+        <article class="fl-left w-70">
 
-            <!-- article header -->
+            <!-- header -->
             
             <header class="d-flex al-ctr">
+            
+                <div class="container-inner jus-bet ">
 
-                <div class="inner-container d-flex al-ctr jus-bet">
-                    <!-- article header left -->
-                    <div class="header-left">
-    
+                    <div class="header-left d-flex al-ctr g-10">
                         <div class="header-img">
-                            <img src="img/avatar_1.jpg" alt="contact-img">
+                            <img src="img/avatar_1.jpg" alt="avatar-logo">
                         </div>
     
                         <div class="header-txt">
-                            <p class="fw-bold">Massimo</p>
-                            <p class="cl-b0">Ultimo accesso il 10/02/2020</p>
-                            <p class="cl-b0">alle 16:53:12</p>
+                            <p>Massimo</p>
+                            <p class="cl-b0 fs-little">Ultimo accesso oggi 10/10/2020</p>
+                            <p class="cl-b0 fs-little">alle 10:20:05</p>
                         </div>
-    
                     </div>
 
-                    <!-- article header right -->
-                    <div class="header-right d-flex d-flex-gap-20">
-
-                        <i class="fas fa-circle-notch cl-b0 fs-big"></i>
-                        <i class="fas fa-comment-alt cl-b0 fs-big"></i>
-                        <i class="fas fa-ellipsis-v cl-b0 fs-big"></i>
-
-
+                    <div class="header-right d-flex al-ctr g-20">
+                        <i class="fas fa-circle-notch cl-b0"></i>
+                        <i class="fas fa-comment-alt cl-b0"></i>
+                        <i class="fas fa-ellipsis-v cl-b0"></i>
                     </div>
-
-
+                    
                 </div>
-                
 
             </header>
-
-            <!-- article main -->
-            <main>
-
-                <!-- article section chat -->
-                <section id="chat">
-
-                    <div class="inner-container">
-
-                        <div class="chat-row jus-end d-flex al-ctr">
-
-                            <div class="usr msg d-flex-col jus-ctr">
-
-                                <p class="fs-normal">Porta fuori il cane <i class="fas fa-chevron-down fl-right"></i></p>
-                                <p class="fs-little txt-right cl-b0">10/04/2020 15:35:50</p>
-
-                            </div>
-
-                        </div>
-
-
-                    </div>
-
-                </section>
-
-                <!-- article section send msg -->
-                <section id="send-msg" class="d-flex jus-ar al-ctr">
-
-                    <i class="fa-solid fa-face-grin fs-big"></i>
-
-                    <input type="text" placeholder="Inserisci il tuo messaggio">
-
-                    <i class="fa-solid fa-microphone fs-big "></i>
-
-                </section>
-
-
-            </main>
+            
 
 
         </article>
-
-
 
 
 
