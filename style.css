@@ -8,6 +8,11 @@
 /* #229487 - colore WH */
 /* Generale */
 
+/* display */
+.d-i-block{
+    display: inline-block;
+}
+
 /* flex */
 .d-flex-ctr{
     display: flex;
@@ -47,6 +52,10 @@
     width: 70%;
 }
 
+.w-90{
+    width: 90%;
+}
+
 /* font style */
 .fw-bold{
     font-weight: bold;
@@ -54,6 +63,10 @@
 
 .cl-grey{
     color:grey;
+}
+
+.fs-little{
+    font-size: 0.8rem;
 }
 
 
@@ -68,16 +81,9 @@
 /* Container */
 .container{
     width: 85%;
-    min-width: 500px;
+    min-width: 600px;
     height: 95%;
     min-height: 200px;
-}
-
-/* aside */
-aside, article{
-    float: left;
-    height: 100%;
-    border: 1px solid black;
 }
 
 /* header */
@@ -101,10 +107,57 @@ header{
     border-radius: 50%;
 }
 
-.header-text{
-    font-size: 0.8rem;
-}
-
 .header-right{
     color: #b0b0b0;
 }
+
+
+/* aside */
+aside, article{
+    float: left;
+    height: 100%;
+    border: 1px solid black;
+}
+
+/* aside bell */
+aside main .notifications{
+    background-color: #8dd9fc;
+    padding: 10px;
+    height: 60px;
+}
+
+aside main .bell{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #8dd9fc;
+}
+
+/* article */
+
+/* article input */
+aside .aside-input{
+    background-color: #fafafa;
+    padding: 2px;
+}
+aside main .chat-search{
+    margin: 2px;
+    border: 1px solid #b0b0b0;
+    border-radius: 5px;
+}
+
+input{
+    padding: 5px;
+    margin-left: 3px;
+    border: none;
+    
+}
+
+.search-icon{
+    padding: 10px;
+    border-right: 1px solid #b0b0b0;
+    color: #b0b0b0;
+
+}
+
