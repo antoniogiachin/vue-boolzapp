@@ -122,3 +122,23 @@ aside{
     background-color: #fff;
     color: #8dd9fc;
 }
+
+/* search */
+#search {
+    background-color: #e9e9e9;
+}
+
+#search .container-inner{
+    border: 1px solid #e9e9e9;
+    background-color: #fff;
+}
+
+#search i, #search input{
+    display: inline-block;
+    padding: 10px;
+}
+
+#search input{
+    border: none;
+    width: 90%;
+}
