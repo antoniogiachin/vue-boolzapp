@@ -145,16 +145,16 @@
                     <!-- article sezione chat -->
                     <section id="chat">
                         
-                        <div class="container-inner d-flex">
+                        <div class="container-inner d-flex" v-for="message in contact.messages">
                            
-                            <div class="msg usr fs-little">
-                                <p class="clearfix">Porta fuori il cane <i class="fas fa-chevron-down fl-right"></i></p>
-                                <p class="fs-tiny txt-right ml-auto">10/01/2020 16:34:54</p>
+                            <div class="msg usr fs-little" v-if="message.status == 'sent'">
+                                <p class="clearfix">{{message.text}} <i class="fas fa-chevron-down fl-right"></i></p>
+                                <p class="fs-tiny txt-right ml-auto">{{message.date}}</p>
                             </div>
                             
-                            <div class="msg ia fs-little">
-                                <p class="clearfix">Porta fuori il cane <i class="fas fa-chevron-down fl-right"></i></p>
-                                <p class="fs-tiny txt-right">10/01/2020 16:34:54</p>
+                            <div class="msg ia fs-little" v-if="message.status == 'received'" >
+                                <p class="clearfix">{{message.text}} <i class="fas fa-chevron-down fl-right"></i></p>
+                                <p class="fs-tiny txt-right">{{message.date}}</p>
                             </div>
 
                         </div>
