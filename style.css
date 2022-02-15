@@ -166,6 +166,7 @@ aside main{
 #search input{
     border: none;
     width: 90%;
+    outline: none;
 }
 
 /* chat-list */
@@ -210,6 +211,7 @@ article #chat{
     padding:10px 20px;
     border-radius: 10px;
     background-color: #fff;
+    line-height: 15px;
 }
 
 #chat .msg.usr{
@@ -218,7 +220,15 @@ article #chat{
 
 #chat .fas{
     margin-left: 5px;
+    visibility: hidden;
+    cursor: pointer;
 }
+#chat .msg:hover .fas{
+    visibility: visible;
+}
+
+
+
 
     /* article send msg */
 #send-msg {
@@ -231,4 +241,5 @@ article #chat{
     width: 80%;
     padding: 10px;
     border: none;
+    outline: none;
 }

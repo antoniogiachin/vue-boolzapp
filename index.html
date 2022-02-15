@@ -107,11 +107,11 @@
         </aside>
 
         <!-- article -->
-        <article class="fl-left w-70">
+        <article class="fl-left w-70" v-for="contact in contacts">
 
             <!-- header -->
             
-            <header class="d-flex al-ctr">
+            <header class="d-flex al-ctr" >
             
                 <div class="container-inner jus-bet ">
 
@@ -120,10 +120,10 @@
                             <img src="img/avatar_1.jpg" alt="avatar-logo">
                         </div>
     
-                        <div class="header-txt">
-                            <p>Massimo</p>
-                            <p class="cl-b0 fs-little">Ultimo accesso oggi 10/10/2020</p>
-                            <p class="cl-b0 fs-little">alle 10:20:05</p>
+                        <div class="header-txt" v-if="contact.visible">
+                            <p>{{contact.name}}</p>
+                            <p class="cl-b0 fs-little">Ultimo accesso oggi {{contact.messages[contact.messages.length -1].date.slice(0,11)}}</p>
+                            <p class="cl-b0 fs-little">{{contact.messages[contact.messages.length -1].date.slice(11)}}</p>
                         </div>
                     </div>
 

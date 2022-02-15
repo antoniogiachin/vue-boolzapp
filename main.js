@@ -63,7 +63,7 @@ const app = new Vue (
 
                     avatar: '_2',
 
-                    visible: true,
+                    visible: false,
 
                     messages: [
 
@@ -103,7 +103,7 @@ const app = new Vue (
 
                     avatar: '_3',
 
-                    visible: true,
+                    visible: false,
 
                     messages: [
 
@@ -140,7 +140,7 @@ const app = new Vue (
 
                     avatar: '_4',
 
-                    visible: true,
+                    visible: false,
 
                     messages: [
 
