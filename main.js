@@ -170,6 +170,9 @@ const app = new Vue (
 
         methods : {
 
+            // Funzione cambio visibilita'
+            // Cicla un array di obj e setta la visibilita' a false
+            // Successivamente imposta visibilita' a true per array cliccato
             changeVisibility(array, index){
 
                 for(let i=0; i < array.length; i++){
