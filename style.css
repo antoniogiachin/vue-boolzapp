@@ -82,6 +82,10 @@ body{
     gap: 20px;
 }
 
+.ml-auto{
+    margin-left: auto;
+}
+
 /* text-decoration */
 .cl-b0{
     color: #b0b0b0;
@@ -202,20 +206,26 @@ article #chat{
     overflow: auto;
 }
 
-#chat .row-chat{
-    display: flex;
-    padding: 20px;
+#chat .container-inner{
+    flex-direction: column;
+    padding: 30px 0px;
 }
 
 #chat .msg{
-    padding:10px 20px;
+    width: 200px;
+    max-width: 40%;
+    min-width: 150px;
+    padding: 20px 10px 5px 20px;
     border-radius: 10px;
-    background-color: #fff;
-    line-height: 15px;
 }
 
 #chat .msg.usr{
     background-color: #d4f9b8;
+    margin-left: auto;
+}
+
+#chat .msg.ia{
+    background-color: #fff;
 }
 
 #chat .fas{
