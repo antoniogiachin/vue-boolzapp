@@ -6,7 +6,7 @@
 }
 
 body{
-    background: linear-gradient( #229487 15%, #d7dad5 15%);
+    background: linear-gradient( #229487 150px, #d7dad5 150px);
 }
 
 /* generali */
@@ -112,12 +112,12 @@ header{
     background-color: #e9e9e9;
 }
 
-.header-img{
+.header-img, .list-img{
     width: 40px;
     height: 40px;
 }
 
-.header-img img{
+.header-img img, .list-img img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -180,7 +180,7 @@ aside main{
     list-style-type: none;
 }
 
-#chat-list ul li:active{
+#chat-list ul li:hover, #chat-list .active{
     background-color: #e9e9e9;
 }
 

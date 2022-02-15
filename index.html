@@ -71,16 +71,16 @@
 
                     <ul>
 
-                        <li class="d-flex al-ctr" v-for="(contact, index) in contacts">
+                        <li class="d-flex al-ctr " v-for="(contact, index) in contacts">
 
                             <div class="container-inner clearfix">
 
                                 <div class="list-left d-flex  g-10 fl-left w-70">
-                                    <div class="header-img">
-                                        <img :src=" 'img/avatar' + contact.avatar  + '.jpg' " alt="avatar-logo">
+                                    <div class="list-img">
+                                        <img :src=" `./img/avatar${contact.avatar}.jpg` " alt="avatar-logo">
                                     </div>
                 
-                                    <div class="header-txt">
+                                    <div class="list-txt">
                                         <p class="fs-little">{{contact.name}}</p>
                                         <p class="cl-b0 fs-little">{{contact.messages[contact.messages.length -1] .text.slice(0,12) + '...'}}</p>                            
                                     </div>
@@ -109,7 +109,7 @@
         <!-- article -->
         <article class="fl-left w-70" >
 
-            <template v-if="contact.visible" v-for="contact in contacts">
+            <template v-if="contact.visible" v-for="(contact, index) in contacts">
 
                 <!-- header -->
                 
@@ -119,7 +119,7 @@
     
                         <div class="header-left d-flex al-ctr g-10">
                             <div class="header-img">
-                                <img src="img/avatar_1.jpg" alt="avatar-logo">
+                                <img :src=" `./img/avatar${contact.avatar}.jpg` " alt="avatar-logo">
                             </div>
         
                             <div class="header-txt" >
@@ -150,7 +150,6 @@
                                 <p>Porta fuori il cane <i class="fas fa-chevron-down"></i></p>
                                 <p class="fs-tiny txt-right">10/01/2020 16:34:54</p>
                             </div>
-                            
                         </div>
     
                         <div class="row-chat">

@@ -170,6 +170,9 @@ const app = new Vue (
 
         methods : {
 
+            changeVisibility(index){
+                this.contacts[index].visible = !this.contacts[index].visible
+            }
             
 
 
