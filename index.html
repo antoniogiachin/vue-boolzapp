@@ -107,67 +107,71 @@
         </aside>
 
         <!-- article -->
-        <article class="fl-left w-70" v-for="contact in contacts">
+        <article class="fl-left w-70" >
 
-            <!-- header -->
-            
-            <header class="d-flex al-ctr" >
-            
-                <div class="container-inner jus-bet ">
+            <template v-if="contact.visible" v-for="contact in contacts">
 
-                    <div class="header-left d-flex al-ctr g-10">
-                        <div class="header-img">
-                            <img src="img/avatar_1.jpg" alt="avatar-logo">
+                <!-- header -->
+                
+                <header class="d-flex al-ctr" >
+                
+                    <div class="container-inner jus-bet ">
+    
+                        <div class="header-left d-flex al-ctr g-10">
+                            <div class="header-img">
+                                <img src="img/avatar_1.jpg" alt="avatar-logo">
+                            </div>
+        
+                            <div class="header-txt" >
+                                <p>{{contact.name}}</p>
+                                <p class="cl-b0 fs-little">Ultimo accesso oggi {{contact.messages[contact.messages.length -1].date.slice(0,11)}}</p>
+                                <p class="cl-b0 fs-little">{{contact.messages[contact.messages.length -1].date.slice(11)}}</p>
+                            </div>
                         </div>
     
-                        <div class="header-txt" v-if="contact.visible">
-                            <p>{{contact.name}}</p>
-                            <p class="cl-b0 fs-little">Ultimo accesso oggi {{contact.messages[contact.messages.length -1].date.slice(0,11)}}</p>
-                            <p class="cl-b0 fs-little">{{contact.messages[contact.messages.length -1].date.slice(11)}}</p>
-                        </div>
-                    </div>
-
-                    <div class="header-right d-flex al-ctr g-20">
-                        <i class="fas fa-circle-notch cl-b0"></i>
-                        <i class="fas fa-comment-alt cl-b0"></i>
-                        <i class="fas fa-ellipsis-v cl-b0"></i>
-                    </div>
-                    
-                </div>
-
-            </header>
-
-            <!-- article main -->
-            <main>
-
-                <!-- article sezione chat -->
-                <section id="chat">
-
-                    <div class="row-chat jus-end">
-                        <div class="msg usr fs-little">
-                            <p>Porta fuori il cane <i class="fas fa-chevron-down"></i></p>
-                            <p class="fs-tiny txt-right">10/01/2020 16:34:54</p>
+                        <div class="header-right d-flex al-ctr g-20">
+                            <i class="fas fa-circle-notch cl-b0"></i>
+                            <i class="fas fa-comment-alt cl-b0"></i>
+                            <i class="fas fa-ellipsis-v cl-b0"></i>
                         </div>
                         
                     </div>
-
-                    <div class="row-chat">
-                        <div class="msg fs-little">
-                            <p>Porta fuori il cane <i class="fas fa-chevron-down"></i></p>
-                            <p class="fs-tiny txt-right">10/01/2020 16:34:54</p>
+    
+                </header>
+    
+                <!-- article main -->
+                <main>
+    
+                    <!-- article sezione chat -->
+                    <section id="chat">
+    
+                        <div class="row-chat jus-end">
+                            <div class="msg usr fs-little">
+                                <p>Porta fuori il cane <i class="fas fa-chevron-down"></i></p>
+                                <p class="fs-tiny txt-right">10/01/2020 16:34:54</p>
+                            </div>
+                            
                         </div>
-                        
-                    </div>
-                </section>
+    
+                        <div class="row-chat">
+                            <div class="msg fs-little">
+                                <p>Porta fuori il cane <i class="fas fa-chevron-down"></i></p>
+                                <p class="fs-tiny txt-right">10/01/2020 16:34:54</p>
+                            </div>
+                            
+                        </div>
+                    </section>
+    
+                    <!-- article sezione send msg -->
+                    <section id="send-msg" class="d-flex jus-ar al-ctr">
+                        <i class="fa-solid fa-face-grin  fs-big"></i>
+                        <input type="text" placeholder="Inserisci il tuo testo">
+                        <i class="fa-solid fa-microphone  fs-big"></i>
+                    </section>
+    
+                </main>
 
-                <!-- article sezione send msg -->
-                <section id="send-msg" class="d-flex jus-ar al-ctr">
-                    <i class="fa-solid fa-face-grin  fs-big"></i>
-                    <input type="text" placeholder="Inserisci il tuo testo">
-                    <i class="fa-solid fa-microphone  fs-big"></i>
-                </section>
-
-            </main>
+            </template>
 
 
         </article>
