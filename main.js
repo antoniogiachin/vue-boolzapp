@@ -165,6 +165,8 @@ const app = new Vue (
 
             ],
 
+            newText: '',
+
 
         },
 
@@ -182,8 +184,50 @@ const app = new Vue (
                 }
                 
                 this.contacts[index].visible = true;
-            }
+            },
+
+
+            //Funzione aggiunta messaggio e risposta
+            addMsg(index){
+
+                // push nuovo messaggio mandato
+                this.contacts[index].messages.push(
+
+                    {
+
+                        date: '10/01/2020',
+
+                        text: this.newText,
+
+                        status: 'sent'
+
+                    },
+
+
+                );
+                
+                // svuoto input msg
+                this.newText='';
+
+                // Funzione di risposta automatica dopo 1 secondo
+                setTimeout(() => {
+                    this.contacts[index].messages.push(
             
+                        {
+                
+                            date: '10/01/2020',
+                
+                            text: 'ok',
+                
+                            status: 'received'
+                
+                        },
+                
+                
+                    );
+                }, 1000);
+
+            },
 
 
         },
@@ -192,3 +236,5 @@ const app = new Vue (
     }
 
 );
+
+

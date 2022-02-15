@@ -176,7 +176,9 @@
                     <!-- article sezione send msg -->
                     <section id="send-msg" class="d-flex jus-ar al-ctr">
                         <i class="fa-solid fa-face-grin  fs-big"></i>
-                        <input type="text" placeholder="Inserisci il tuo testo">
+
+                        <!-- V-model su newText, da pushare come testo nuovo messaggio, ascoltatore di eventi alla pressione di invio -->
+                        <input type="text" placeholder="Inserisci il tuo testo" v-model="newText" @keyup.enter="addMsg(index)">
                         <i class="fa-solid fa-microphone  fs-big"></i>
                     </section>
     
