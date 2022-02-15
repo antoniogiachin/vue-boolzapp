@@ -71,7 +71,7 @@
 
                     <ul>
 
-                        <li class="d-flex al-ctr " v-for="(contact, index) in contacts">
+                        <li class="d-flex al-ctr " v-for="(contact, index) in contacts" @click="changeVisibility(contacts, index)" :class="contact.visible == true ? 'active' : ''">
 
                             <div class="container-inner clearfix">
 

@@ -170,8 +170,15 @@ const app = new Vue (
 
         methods : {
 
-            changeVisibility(index){
-                this.contacts[index].visible = !this.contacts[index].visible
+            changeVisibility(array, index){
+
+                for(let i=0; i < array.length; i++){
+
+                    array[i].visible = false;
+
+                }
+                
+                this.contacts[index].visible = true;
             }
             
 
