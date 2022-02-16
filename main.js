@@ -229,7 +229,7 @@ const app = new Vue (
              // lista contatti filtrata
              filterContact(){
 
-                return this.contacts.filter(value=>{
+                const filtered = this.contacts.filter(value=>{
 
                     if(value.name.toLowerCase().includes(this.search.toLowerCase())){
                         return true;
@@ -239,6 +239,7 @@ const app = new Vue (
 
                 });
 
+                return filtered
 
             }
         }
