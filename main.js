@@ -239,7 +239,7 @@ const app = new Vue (
 
                 });
 
-                return filtered
+                return filtered;
 
             }
         }

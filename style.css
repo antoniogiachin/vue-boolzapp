@@ -224,6 +224,7 @@ article #chat{
     border-radius: 10px;
     padding: 20px;
     flex-direction: column;
+    position: relative;
 }
 
 #chat .msg.sent{
@@ -263,6 +264,26 @@ article #chat{
 
 
 /* dropdown */
-#dropdown ul{
+.dropdown{
+    width: 80px;
+    height: 40px;
+    background-color: #ffffff;
+    position: absolute;
+    right: 20px;
+    bottom: -10px;
+    padding: 5px;
+}
+
+.dropdown ul{
     list-style-type: none;
+    height: 100%;
+}
+
+.dropdown ul li{
+    height: 50%;
+}
+
+.dropdown ul li:hover{
+    background-color: #b0b0b0;
+    cursor: pointer;
 }
