@@ -156,16 +156,16 @@
                     <div class="container-inner d-flex g-20">
                         
                        <!-- ciclo e stampo i messaggi -->
-                        <div class="msg d-flex" :class="message.status" v-for="message in filterContact[active].messages">
+                        <div class="msg d-flex" :class="message.status" v-for="(message, index) in filterContact[active].messages" v-show="message.show">
 
                             <div class="msg-txt d-flex al-ctr jus-bet fs-little">
-                                <p>{{message.text}}</p>
+                                <p>{{message.text}} {{index}}</p>
                                 <div class="dropdown">
-                                    <i class="fas fa-chevron-down fs-littleo"></i>
+                                    <i class="fas fa-chevron-down fs-little"></i>
                                     <div class="dropdown-menu">
                                         <ul>
                                             <li>Message Info</li>
-                                            <li class="cl-rd">Delete</li>
+                                            <li @click="deleteMessage(active, index)" class="cl-rd">Delete</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -193,8 +193,6 @@
 
 
         </article>
-
-
 
     </div>
 

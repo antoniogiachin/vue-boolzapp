@@ -26,6 +26,8 @@ const app = new Vue (
 
                             status: 'sent',
 
+                            show: true,
+
 
                         },
 
@@ -37,6 +39,8 @@ const app = new Vue (
 
                             status: 'sent',
 
+                            show: true,
+
 
                         },
 
@@ -47,6 +51,8 @@ const app = new Vue (
                             text: 'Tutto fatto!',
 
                             status: 'received',
+
+                            show: true,
 
 
                         },
@@ -72,7 +78,9 @@ const app = new Vue (
 
                             text: 'Ciao come stai?',
 
-                            status: 'sent'
+                            status: 'sent',
+
+                            show: true,
 
                         },
 
@@ -81,7 +89,9 @@ const app = new Vue (
 
                             text: 'Bene grazie! Stasera ci vediamo?',
 
-                            status: 'received'
+                            status: 'received',
+
+                            show: true,
 
                         },
 
@@ -90,7 +100,9 @@ const app = new Vue (
                             
                             text: 'Mi piacerebbe ma devo andare a fare la spesa.',
 
-                            status: 'sent'
+                            status: 'sent',
+
+                            show: true,
 
                         }
 
@@ -112,7 +124,9 @@ const app = new Vue (
 
                             text: 'La Marianna va in campagna',
 
-                            status: 'received'
+                            status: 'received',
+
+                            show: true,
                         },
 
                         {
@@ -120,7 +134,9 @@ const app = new Vue (
 
                             text: 'Sicuro di non aver sbagliato chat?',
 
-                            status: 'sent'
+                            status: 'sent',
+
+                            show: true,
                         },
 
                         {
@@ -128,7 +144,9 @@ const app = new Vue (
 
                             text: 'Ah scusa!',
 
-                            status: 'received'
+                            status: 'received',
+
+                            show: true,
                         }
 
                     ],
@@ -149,7 +167,9 @@ const app = new Vue (
 
                             text: 'Lo sai che ha aperto una nuova pizzeria?',
 
-                            status: 'sent'
+                            status: 'sent',
+
+                            show: true,
                         },
 
                         {
@@ -157,7 +177,9 @@ const app = new Vue (
 
                             text: 'Si, ma preferirei andare al cinema',
 
-                            status: 'received'
+                            status: 'received',
+
+                            show: true,
                         }
                     ],
                 },
@@ -195,7 +217,9 @@ const app = new Vue (
 
                         text: this.newText,
 
-                        status: 'sent'
+                        status: 'sent',
+
+                        show: true,
 
                     }
 
@@ -212,7 +236,9 @@ const app = new Vue (
     
                             text: "ok!",
     
-                            status: 'received'
+                            status: 'received',
+
+                            show: true,
     
                         }
     
@@ -222,12 +248,14 @@ const app = new Vue (
      
             }, 
 
-            // funzione mostra dropdown
-            showDropdown(){
+            // funzione elimina messaggio
+            deleteMessage(active, index){
+               
+                // cambia attributo per v-if e aumenta index pre riferirsi a msg successivo in false 
+                this.filterContact[active].messages[index].show = false;
 
+                index++;
                 
-
-
             }
 
         },
