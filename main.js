@@ -222,6 +222,14 @@ const app = new Vue (
      
             }, 
 
+            // funzione mostra dropdown
+            showDropdown(){
+
+                
+
+
+            }
+
         },
 
         computed : {
