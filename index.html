@@ -126,14 +126,14 @@
 
                     <div class="header-left d-flex al-ctr g-10">
                         <div class="header-img">
-                            <img :src=" `./img/avatar${contacts[active].avatar}.jpg` " alt="avatar-logo">
+                            <img :src=" `./img/avatar${filterContact[active].avatar}.jpg` " alt="avatar-logo">
                         </div>
     
                         <div class="header-txt">
-                            <p>{{contacts[active].name}}</p>
+                            <p>{{filterContact[active].name}}</p>
                             <!-- tronco per mostrare solo la data e sotto l'orario -->
-                            <p class="cl-b0 fs-little">Ultimo accesso oggi {{contacts[active].messages[contacts[active].messages.length -1].date.slice(0,11)}}</p>
-                            <p class="cl-b0 fs-little">{{contacts[active].messages[contacts[active].messages.length -1].date.slice(11)}}</p>
+                            <p class="cl-b0 fs-little">Ultimo accesso oggi {{filterContact[active].messages[filterContact[active].messages.length -1].date.slice(0,11)}}</p>
+                            <p class="cl-b0 fs-little">{{filterContact[active].messages[filterContact[active].messages.length -1].date.slice(11)}}</p>
                         </div>
                     </div>
 
@@ -153,12 +153,23 @@
                 <!-- article sezione chat -->
                 <section id="chat">
                     
-                    <div class="container-inner d-flex">
+                    <div class="container-inner d-flex g-20">
                         
-                       <!-- ciclo e stmapo i messaggi -->
-                        <div class="msg fs-little" :class="message.status" v-for="message in contacts[active].messages">
-                            <p class="clearfix">{{message.text}} <i class="fas fa-chevron-down fl-right"></i></p>
-                            <p class="fs-tiny txt-right ml-auto">{{message.date}}</p>
+                       <!-- ciclo e stampo i messaggi -->
+                        <div class="msg d-flex" :class="message.status" v-for="message in filterContact[active].messages">
+
+                            <div class="msg-txt d-flex al-ctr fs-little">
+                                <p>{{message.text}}</p>
+                                <i class="fas fa-chevron-down fs-little ml-auto"></i>
+                                <div class="dropdown">
+                                    <ul>
+                                        <li>aa</li>
+                                        <li>aa</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="fs-tiny ml-auto">{{message.date}}</p>
+
                         </div>
 
                     </div>    

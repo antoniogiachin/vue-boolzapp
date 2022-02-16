@@ -49,6 +49,10 @@ body{
     height: 100%;
 }
 
+.w-90{
+    width: 90%;
+}
+
 /* flex */
 .d-flex{
     display: flex;
@@ -89,6 +93,10 @@ body{
 /* text-decoration */
 .cl-b0{
     color: #b0b0b0;
+}
+
+.cl-rd{
+    color: red;
 }
 
 .fs-little{
@@ -213,11 +221,9 @@ article #chat{
 
 #chat .msg{
     width: 200px;
-    max-width: 40%;
-    min-width: 150px;
-    padding: 20px 10px 5px 20px;
     border-radius: 10px;
-    margin-bottom: 10px;
+    padding: 20px;
+    flex-direction: column;
 }
 
 #chat .msg.sent{
@@ -256,7 +262,7 @@ article #chat{
 }
 
 
-/* active */
-.active-msg{
-    display: block;
+/* dropdown */
+#dropdown ul{
+    list-style-type: none;
 }
