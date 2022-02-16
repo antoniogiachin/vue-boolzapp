@@ -195,7 +195,7 @@ const app = new Vue (
 
                     {
 
-                        date: '10/01/2020',
+                        date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
 
                         text: this.newText,
 
@@ -215,7 +215,7 @@ const app = new Vue (
             
                         {
                 
-                            date: '10/01/2020',
+                            date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                 
                             text: 'ok',
                 
