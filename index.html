@@ -61,7 +61,7 @@
                     <div class="container-inner">
 
                         <i class="fa-solid fa-magnifying-glass  cl-b0"></i>
-                        <input type="text" placeholder="Cerca o inizia conversazione" class="fs-tiny">
+                        <input type="text" placeholder="Cerca o inizia conversazione" class="fs-tiny" v-model="search" >
 
                     </div>
                 </section>
@@ -72,7 +72,7 @@
                     <ul>
 
                         <!-- cicla e stampa i contatti con v-for, al click invoca funzione cambio visibilita', aggiunge classe active per sfondo chat attiva -->
-                        <li class="d-flex al-ctr " v-for="(contact, index) in contacts" @click="setContactActive(index)" :class="(index == active)? 'active': '' " >
+                        <li class="d-flex al-ctr " v-for="(contact, index) in filterContact"  @click="setContactActive(index)" :class="(index == active)? 'active': '' " >
 
                             <div class="container-inner clearfix">
 
@@ -167,7 +167,7 @@
                     <i class="fa-solid fa-face-grin  fs-big"></i>
 
                     <!-- V-model su newText, da pushare come testo nuovo messaggio, ascoltatore di eventi alla pressione di invio -->
-                    <input type="text" placeholder="Inserisci il tuo testo" v-model="newText" @keyup.enter="sendMessage()">
+                    <input type="text" placeholder="Inserisci il tuo messaggio" v-model="newText" @keyup.enter="sendMessage()">
                     <i class="fa-solid fa-microphone  fs-big"></i>
                 </section>
 

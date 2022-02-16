@@ -14,7 +14,7 @@ const app = new Vue (
 
                     avatar: '_1',
 
-                    visible: true,
+                    visible: false,
 
                     messages: [
 
@@ -171,6 +171,9 @@ const app = new Vue (
             // Chat attiva
             active: 0,
 
+            //search
+            search:'',
+
 
         },
 
@@ -184,45 +187,61 @@ const app = new Vue (
             //Funzione aggiunta messaggio e risposta
             sendMessage(){
 
-                const newMessageObj = {
-     
-                 date: 'vediamo dopo',
-     
-                 text : this.newMessage,
-     
-                 status: 'sent',
-     
-                };
-     
-                this.contact[this.active].messages.push(newMessageObj);
-     
-                this.newMessage = '';
-     
-                const newMessageReply = {
-     
-                 // Prende la data e gli diciamo il formato di uscita che vogliamo
-                 // https:day.js.org/docs/en/display/format
-                 date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
-     
-                 text : 'ok',
-     
-                 status: 'reviced',
-     
-                };
-     
-                // Uso arrow function per avere lo scope uguale, il this altrimenti si riferisce al settimeout e non allo scope di vue
-                setTimeout(() =>{
-     
-                 this.contacts[this.active].message.push(newMessageReply);
-     
+
+                this.contacts[this.active].messages.push(
+
+                    {
+                        date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+
+                        text: this.newText,
+
+                        status: 'sent'
+
+                    }
+
+                )
+
+                this.newText ='';
+
+                setTimeout(() => {
+
+                    this.contacts[this.active].messages.push(
+
+                        {
+                            date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+    
+                            text: "ok!",
+    
+                            status: 'received'
+    
+                        }
+    
+                    ) 
                 }, 1000);
-     
+
      
             }, 
-            
-
 
         },
+
+        computed : {
+
+             // lista contatti filtrata
+             filterContact(){
+
+                return this.contacts.filter(value=>{
+
+                    if(value.name.toLowerCase().includes(this.search.toLowerCase())){
+                        return true;
+                    };
+
+                    return false;
+
+                });
+
+
+            }
+        }
 
 
     }
